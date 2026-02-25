@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px black;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    padding: 10px;
+    background: #00c6ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0072ff;
+}
+
+.record {
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.clickBox {
+    background: #1f3b57;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hiddenBox {
+    display: none;
+    padding: 10px;
+}

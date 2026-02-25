@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart City Complaint & Penalty System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🚦 Smart City Complaint & Penalty System</h1>
+    <p>Building Responsible Citizens for a Better India</p>
+</header>
+
+<!-- CLICKABLE INFO SECTION -->
+<section class="card">
+    <h2>📘 Know Your Rights & Duties</h2>
+
+    <div class="clickBox" onclick="toggleBox('constitution')">
+        📜 Indian Constitution – Article 51A
+    </div>
+    <div id="constitution" class="hiddenBox">
+        Article 51A defines Fundamental Duties of Indian citizens.
+        It reminds citizens to protect public property and follow laws.
+    </div>
+
+    <div class="clickBox" onclick="toggleBox('responsibility')">
+        👥 Citizen Responsibilities
+    </div>
+    <div id="responsibility" class="hiddenBox">
+        • Respect National Symbols <br>
+        • Protect Public Property <br>
+        • Follow Traffic Rules <br>
+        • Maintain Cleanliness <br>
+        • Protect Environment
+    </div>
+
+    <div class="clickBox" onclick="toggleBox('laws')">
+        ⚖ Related Indian Laws
+    </div>
+    <div id="laws" class="hiddenBox">
+        • Motor Vehicles Act, 1988 <br>
+        • Prevention of Damage to Public Property Act, 1984 <br>
+        • Environment Protection Act, 1986 <br>
+        • Solid Waste Management Rules, 2016
+    </div>
+</section>
+
+<!-- COMPLAINT FORM -->
+<section class="card">
+    <h2>📝 Register Your Complaint</h2>
+    <form id="reportForm">
+
+        <input type="text" name="name" placeholder="Enter Your Name" required>
+
+        <input type="text" name="location" placeholder="Enter Location" required>
+
+        <textarea name="description" placeholder="Describe the issue..." required></textarea>
+
+        <!-- ✅ UPDATED FILE INPUT -->
+        <label><b>Upload Evidence (Photo or Video)</b></label>
+        <input type="file"
+               name="video"
+               accept="image/*,video/*"
+               required>
+
+        <button type="submit">Submit Complaint</button>
+    </form>
+
+    <p id="msg"></p>
+</section>
+
+<!-- PENALTY CHECKER -->
+<section class="card">
+    <h2>💰 Penalty Checker</h2>
+    <select id="violation">
+        <option value="">Select Violation Type</option>
+        <option value="1000">Littering</option>
+        <option value="2000">No Helmet</option>
+        <option value="5000">Drunk Driving</option>
+        <option value="10000">Public Property Damage</option>
+    </select>
+    <button onclick="checkPenalty()">Check Penalty</button>
+    <h3 id="result"></h3>
+</section>
+
+<!-- ADMIN RECORDS -->
+<section class="card">
+    <h2>📂 Admin Complaint Records</h2>
+    <div id="records"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
